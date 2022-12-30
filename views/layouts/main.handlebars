@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carga de productos</title>
 </head>
-<body>
+<body style="box-sizing: border-box; margin: 0px; padding: 0px;">
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+
     <h1>Cargar Productos:</h1>
     <form action="/productos" method="post">
         <label for="title">Nombre del producto</label>
@@ -21,6 +23,7 @@
         
         <button type="submit">Cargar</button>
     </form>
+
 {{{body}}}
 </body>
 </html>

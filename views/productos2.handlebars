@@ -1,6 +1,33 @@
-    <h1>Productos cargados:</h1>
-    <p>{{title}}</p>
-    <p>{{price}}</p>
-    <p>{{url}}</p>
+{{!-- <div style="border:5px solid rgb(230, 149, 0);border-radius:10px;background-color: rgb(255, 208, 55); width: 80%; display:flex; flex-direction:column">
+<h1>Productos cargados:</h1>
+{{#each listaproductos}}
+    <p>{{this.title}}</p>
+    <img src={{this.url}} width="60px"></img>
+    <p>{{this.price}}</p>
+    <hr>
+{{/each}}
+</div> --}}
+
+<table style="background-color: rgb(255, 174, 0); border: 2px solid black; width: auto; margin: 10px; box-sizing:border-box;">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Imagen</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each listaproductos}}
+    <tr>
+      <td style="background-color: rgba(255, 211, 66, 0.986); border: 2px solid black; text-align: center; padding-left: 30px; padding-right: 30px;">{{this.title}}</td>
+      <td style="background-color: rgba(255, 211, 66, 0.986); border: 2px solid black; text-align: center; padding-left: 30px; padding-right: 30px;"><img src={{this.url}} width="60px"></img></td>
+      <td style="background-color: rgba(255, 211, 66, 0.986); border: 2px solid black; text-align: center; padding-left: 30px; padding-right: 30px;">${{this.price}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+ 
 
 
