@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carga de productos</title>
 </head>
-<body style="box-sizing: border-box; margin: 0px; padding: 0px;">
+<body style="box-sizing: border-box; margin: 0px; padding: 0px; background-image:url(../assets/wallpaper.png); background-repeat: no-repeat; background-size:cover ;">
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="http://localhost:8080/socket.io/socket.io.js"></script>
 
@@ -24,6 +24,21 @@
         <button type="submit">Cargar</button>
     </form>
 
+
 {{{body}}}
+
+
+<h2>Chat:</h2>
+<div id="mensajes" style="background-color: whitesmoke; width: 400px; display:flex; flex-direction:column; flex-wrap:nowrap; margin:15px;border: 1px solid black;padding:10px">
+</div>
+
+<form onsubmit="return addMessage(this)">
+    <input type="email" placeholder="Email" id="username">
+    <input type="text" placeholder="Escribe algo!" id="text">
+    <button type="submit">Enviar</button>
+</form>
+
+
+<script src="../js/main.js"></script>
 </body>
 </html>
